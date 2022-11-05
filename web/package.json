@@ -1,0 +1,36 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.1.3",
+    "next": "13.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.7",
+    "@types/react": "18.0.24",
+    "autoprefixer": "^10.4.13",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.1",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.1"
+  },
+  "_commands": {
+    "0": "npx create-next-app@latest",
+    "1": "npm i -D tailwindcss postcss autoprefixer",
+    "2": "npx tailwindcss init -p",
+    "3": "npm i axios"
+  },
+  "_comments": {
+    "2": "Abrir arquivo config",
+    "3": "Biblioteca pra chamadas http"
+  }
+}

@@ -1,0 +1,74 @@
+                # 10_NLW-COPA de 2022
+			* Trilha Ignite*
+
+    - Setup Mobile
+-- Aula 1
+    1. React Native - Criar Aplicações (tanto pra Android qnto IOS) usando React
+        1.1 - Interfaces Nativas
+    2. Expo - Faciliar o ambiente de desenvolvimento
+        2.1 - Automatiza instalação de bibliotecas
+        2.2 - Expo Go - (app a ser instalado no dispositivo Android e/ou iOS)
+    3. Conhecendo o Native Base - (Component Library)
+        3.1 - Customizar componentes atraves de propriedades
+    4. Customizar os temas (cores, fontes, etc)
+    5. Instalar fontes personalizadas
+    6. Customizar a StatusBar
+
+-- Aula 3
+    1. Interface de Autenticação
+        1.1 - Utilizar o SVG como componente no React Native
+        1.2 - Tipagem do Logo.svg
+        1.3 - Criar componente de Button
+        1.4 - Finalizando a interface de SignIn
+    2. Contexto de Autenticação
+        2.1 - Criar Contexto (AuthContext) e Provider(AuthContextProvider)
+        2.2 - Os contextos no React servem para compartilhar informações para todos os componentes que estão envolvidos pelo Provider desse contexto.
+        2.3 - Criar um hook pra usar o contexto mais facil (useAuth)
+    3. Autenticação com Google
+        3.1 - Conceito de OAuth (protocolo de autenticação mais completo e seguro que existe !)
+        3.2 - Configurar o OAuth com google (Console Cloud Google)
+        3.3 - Criar conta Expo
+        3.4 - Criar o Schema pro usuario retornar a aplicação apos autenticação
+        3.5 - Token de Autenticação
+    4. Interface para criar e encontrar o bolão
+        4.1 Compartilhar os componentes (pegar eles prontos em um repo)
+        4.2 - Reaproveitar a estrutura da New para criar a interface Find
+    5. Interface de bolões
+
+-- Aula 4
+    1. Instalar o React Navigation
+    2. Criar as Rotas
+        2.1 - Tipagem da rotas
+    3. Customizar o Bottom Tabs
+        3.1 - Importar o theme
+    4. Integrar com o Back-end
+        4.1 - Instalar o axios
+        4.2 - Configurar acesso a API
+        4.3 - Buscar os dados do usuario no back-end
+        -. (Erros encontrados !)
+            -.1 - Erro da rota post (parametros errads)
+            -.2 - fecth erro -> (atualizar o node pra v18 (tava na v16))
+
+-- Aula 5
+    1. New
+        1.1 - Criar novo Bolão
+    2. Pools
+        2.1 - Listar Balões Criados
+        2.2 - Utilizando mensagem de toast
+        2.3 - Utilizando FlatList
+        2.4 - Utilizando o ListEmptyComponent
+        2.5 - Recarregando a lista quando o foco volta para interface
+    3. Find
+        3.1 - Entrar em um bolão pelo código
+    4. Detalhes
+        4.1 - Implementando as opções: Palpites e Ranking
+        4.2 - Passando parâmetros pela rota
+        4.3 - Buscando detalhes do bolão
+        4.4 - Compartilhando o código do bolão
+    5. Guesses
+        5.1 - Buscar os Games
+        5.2 - Registrar palpite
+    6. Variável de Ambiente
+        6.1 - Protegendo dados sensíveis (clientId)
+        6.2 - .env
+    7. Ranking

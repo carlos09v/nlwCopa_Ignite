@@ -1,0 +1,82 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator erd {
+  provider = "prisma-erd-generator"
+  theme    = "dark"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Criar tabelas
+model Pool {
+  id        String   @id @default(cuid()) // Dizer q é Primary Key - Obs: O Auto Increment ñ é mt seguro
+  title     String
+  code      String   @unique // Unico
+  createdAt DateTime @default(now()) // Qndo criado, vai ficar anotado a data atual
+  ownerId   String?
+
+  participants Participant[] // Relacionamento Inverso
+  owner        User?         @relation(fields: [ownerId], references: [id])
+}
+
+model Participant {
+  id     String @id @default(cuid())
+  userId String
+  poolId String
+
+  guesses Guess[] // Relacionamento Inverso
+  user    User    @relation(fields: [userId], references: [id])
+  pool    Pool    @relation(fields: [poolId], references: [id])
+
+  @@unique([userId, poolId])
+}
+
+// Usuario
+model User {
+  id String @id @default(cuid())
+
+  name      String
+  email     String   @unique
+  googleId  String?  @unique
+  avataUrl  String? // Nullable - Campo q pode estar vazio
+  createdAt DateTime @default(now())
+
+  participatingAt Participant[] // Relacionamento Inverso
+  ownPools        Pool[]
+}
+
+// Jogos
+model Game {
+  id   String   @id @default(cuid())
+  date DateTime
+
+  firstTeamCountryCode  String
+  secondTeamCountryCode String
+
+  guesses Guess[]
+}
+
+// Palpites
+model Guess {
+  id String @id @default(cuid())
+
+  firstTeamPoints Int
+  secondTeamPoint Int
+  createdAt       DateTime @default(now())
+  gameId          String
+  participantId   String
+
+  // Relacionamentos
+  participant Participant @relation(fields: [participantId], references: [id])
+  game        Game        @relation(fields: [gameId], references: [id])
+
+  @@unique([participantId, gameId])
+}

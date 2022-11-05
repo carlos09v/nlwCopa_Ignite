@@ -1,0 +1,31 @@
+				# 10_NLW-COPA de 2022
+			* Trilha Ignite*
+
+	- Setup do back-end
+-- Aula 1
+	1. Fastify ou Express (São Micro Frameworks para Roteamento da aplicação) (Ex: Rota para Cadastrar Usuario, Rota para Listar Usuario...)
+	2. Prisma (Comunicação com Bando de Dados)
+	3. Banco de Dados (Utilizar o SQLite)
+		4. Diagrama ERD (Obs: Estou estudando isso na Facul atualmente KK)
+	5. Contagem dos bolões
+
+-- Aula 2
+	1. Estrutura do banco e relacionamentos
+	2. Criar seed do banco de dados (Dados Iniciais de um DB)
+	3. Criação de novo Bolão
+	4. Contagem de Usuarios
+	5. Contagem de Palpites
+
+-- Aula 4
+	1. Separando arquivos de rotas
+	2. Criação de usuários (Access Token do Google)
+	3. JWT (JSON Web Token)
+		3.1 - Geração de JWT
+		3.2 - Validação de JWT
+	4. Rotas
+		4.1 - Criação de bolão com usuário logado
+		4.2 - Entrar em um Bolão
+		4.3 - Bolões que eu participo
+		4.4 - Detalhes de um Bolão
+		4.5 - Listagem de jogos de um bolão
+		4.6 - Criação de um Palpite

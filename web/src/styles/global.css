@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+body {
+    /* Melhora a renderização no Chrome */
+    --webkit-font-smoothing: antialiased;
+}

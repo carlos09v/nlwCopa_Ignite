@@ -1,0 +1,20 @@
+                # 10_NLW-COPA de 2022
+			* Trilha Ignite*
+
+	- Setup do front-end (React, Next.js, número de bolões)
+-- Aula 1
+	1. Fundamentos React
+		1.1 - Componentes (reutilizar codigo)
+		1.2 - JSX - JavaScript + XML (HTML)
+		1.3 - TSX - TypeScript + JSX
+	2. Next.js (Framework pra React)
+		2.1 - SSR (Server-Side-Rendering) - é o processo de pegar todos os Javascript e todos os CSS de um site que, geralmente é carregado no browser (client-side), e renderizá-los como estático do lado do servidor.
+
+-- Aula 2
+	1. Layout da Aplicação
+	2. Utilizar tailwindcss e postcss (baixar dependencias e extenções)
+		2.1 - tailwindcss - Utilitário CSS a partir das Classes
+		2.2 - postcss - A tool for transforming CSS with JavaScript
+	3. Colocar a fonte Roboto como padrão no tailwind
+	4. Criar o arquivo html da pagina (_document)
+	

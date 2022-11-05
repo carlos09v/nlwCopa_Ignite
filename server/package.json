@@ -1,0 +1,65 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "_commands": {
+    "0": "npm init -y",
+    "1": "npm i typescript -D",
+    "2": "npx tsc --init",
+    "3": "npm i fastify",
+    "4": "npm i tsx -D",
+    "5": "npm i prisma -D",
+    "6": "npm i @prisma/client",
+    "7": "npx prisma init --datasource-provider SQLite",
+    "8": "npx prisma migrate dev",
+    "9": "npx prisma studio",
+    "10": "npm i prisma-erd-generator @mermaid-js/mermaid-cli -D",
+    "11": "npx prisma generate - (ERRO)",
+    "12": "npm i @fastify/cors",
+    "13": "npx prisma db seed",
+    "14": "npm i zod",
+    "15": "npm i short-unique-id",
+    "16": "npm i @fastify/jwt"
+  },
+  "_comments": {
+    "1": "TS = adicionar tipagem estática ao JS (Obs: JS é tipagem dinâmica(fraca))",
+    "2": "fazer o setup do typescript - (npx tsx - Conversor de TS pra JS)",
+    "4": "tsx compila o codigo e executa automaticamente",
+    "5": "interface pra automatizar tarefas (Ex: Automatiza a criação de Tabelas)",
+    "6": "Conectar ao DB (DataBase)",
+    "7": "Utilizar o SQLite, pois o prisma vem com o PostgreSQL como padrão",
+    "8": "Detectar migrations (versionamento de Banco de Dados (tipo Git))",
+    "9": "Vizualizar o DB no browser",
+    "10": "Prisma-Generator usa o Mermaid para (gerar diagramas)",
+    "11": "Vai gerar o diagrama em svg",
+    "12": "Mecanismo de Segurança (Quais aplicações podem consumir os dados do back-end)",
+    "13": "Rodar (criar) o seed",
+    "14": "Biblioteca de Schema Validation",
+    "15": "Biblioteca pra gerar o codigo do Bolão (UUID)"
+  },
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^9.1.7",
+    "prisma": "^4.5.0",
+    "prisma-erd-generator": "^1.2.2",
+    "tsx": "^3.11.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.1.1",
+    "@fastify/jwt": "^6.3.2",
+    "@prisma/client": "^4.5.0",
+    "fastify": "^4.9.2",
+    "short-unique-id": "^4.4.4",
+    "zod": "^3.19.1"
+  }
+}
