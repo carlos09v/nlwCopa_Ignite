@@ -4,7 +4,6 @@ import { prisma } from '../lib/prisma'
 import { authenticate } from '../plugins/authenticate'
 
 export async function authRoutes(fastify: FastifyInstance) {
-    // Rota pra Validar Token
     // Retorna os Dados do Usuario
     fastify.get('/me', {
         onRequest: [authenticate]
@@ -12,6 +11,7 @@ export async function authRoutes(fastify: FastifyInstance) {
         return { user: req.user }
     })
 
+    // Enviar e Receber Token
     fastify.post('/users', async req => {
         // Validar os dados pra ser tratado antes de enviar pro DB (utilizando o zod)
         const createUserBody = z.object({
@@ -61,7 +61,7 @@ export async function authRoutes(fastify: FastifyInstance) {
         // Gerar Token
         const token = fastify.jwt.sign({
             name: user.name,
-            avatarUrl: user.avataUrl
+            avataUrl: user.avataUrl
         }, {
             sub: user.id, // Qm gerou o Token
             expiresIn: '7 days' // Qndo o Token expirar, o usuario é deslogado !

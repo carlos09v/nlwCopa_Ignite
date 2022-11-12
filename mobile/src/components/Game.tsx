@@ -17,7 +17,7 @@ interface GuessProps {
 
 export interface GameProps {
   id: string;
-  date: string
+  date: string;
   firstTeamCountryCode: string;
   secondTeamCountryCode: string;
   guess: null | GuessProps;
@@ -35,7 +35,9 @@ export function Game({ data, setFirstTeamPoints, setSecondTeamPoints, onGuessCon
 
   // Formatar data
   const when = dayjs(data.date).locale(ptBT).format('DD [de] MMMM [de] YYYY [as] HH:00[h]')
-
+  const DateTime = new Date()
+  const checkDate = new Date(data.date) <  DateTime
+  
   return (
     <VStack
       w="full"
@@ -68,11 +70,20 @@ export function Game({ data, setFirstTeamPoints, setSecondTeamPoints, onGuessCon
           code={data.secondTeamCountryCode}
           position="left"
           onChangeText={setSecondTeamPoints}
+          
         />
       </HStack>
 
       {
-        !data.guess &&
+        checkDate &&
+        <HStack alignItems="center">
+          <Text color="red.500" fontSize="sm" fontFamily="heading" mr={3}>
+            Jogo encerrado
+          </Text>
+        </HStack>
+      }
+      {
+        !data.guess && !checkDate &&
         <Button size="xs" w="full" bgColor="green.500" mt={4} onPress={onGuessConfirm}>
           <HStack alignItems="center">
             <Text color="white" fontSize="xs" fontFamily="heading" mr={3}>

@@ -1,11 +1,25 @@
 import { PrismaClient } from '@prisma/client'
+
+import { gamesScheudle } from '../src/api/data'
 // Seed - Dados Iniciais
 
 // Conectar com o DB
 const prisma = new PrismaClient({})
 
 async function main() {
-    const user = await prisma.user.create({
+    // Data API - 08/11/2022
+
+    gamesScheudle.forEach(async data => {
+        await prisma.game.create({
+            data
+        })
+    })
+}
+
+main()
+
+/* 
+const user = await prisma.user.create({
         data: {
             name: 'John Doe',
             email: 'john.doe@gmail.com',
@@ -26,15 +40,6 @@ async function main() {
             }
         }
     })
-
-    /*
-    const participant = await prisma.participant.create({
-        data: {
-            poolId: user.id,
-            userId: user.id
-        }
-    })
-    */
 
     await prisma.game.create({
         data: {
@@ -67,6 +72,4 @@ async function main() {
             }
         }
     })
-}
-
-main()
+*/

@@ -1,7 +1,7 @@
                 # 10_NLW-COPA de 2022
 			* Trilha Ignite*
 
-	- Setup do front-end (React, Next.js, número de bolões)
+	- Setup do front-end (React, Next.js, Tailwind)
 -- Aula 1
 	1. Fundamentos React
 		1.1 - Componentes (reutilizar codigo)

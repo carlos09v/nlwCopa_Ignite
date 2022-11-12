@@ -18,6 +18,7 @@ async function bootstrap() {
 
     await fastify.register(cors, {
         origin: true // Qlquer aplicação pode acessar o back-end
+        // em ambiente dev = true. Em prod é so adicionar os domínios Ex: google.com
     })
 
     
