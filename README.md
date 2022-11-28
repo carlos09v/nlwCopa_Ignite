@@ -1,9 +1,9 @@
 <h1>NLW Copa</h1>
 <h2>Veja o projeto no <a href='https://www.figma.com/community/file/1169028343875283461'>Figma 🔖</a> </h2>
 <div align='center'>
- <img height='500' src="https://github.com/carlos09v/nlwCopa_Ignite/blob/main/mobile/src/assets/Capa.png?raw=true" alt="NLW_Copa-Capa">
+ <img height='500' src="https://github.com/carlos09v/nlwCopa_Ignite/blob/main/project/mobile/src/assets/Capa.png?raw=true" alt="NLW_Copa-Capa">
  <hr>
- <img height='500' src="https://github.com/carlos09v/nlwCopa_Ignite/blob/main/web/src/assets/preview.jpg?raw=true" alt="NLW_Copa-Web">
+ <img height='500' src="https://github.com/carlos09v/nlwCopa_Ignite/blob/main/project/web/src/assets/preview.jpg?raw=true" alt="NLW_Copa-Web">
 </div>
 
 
